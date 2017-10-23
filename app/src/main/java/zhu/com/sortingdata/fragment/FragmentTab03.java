@@ -27,7 +27,7 @@ public class FragmentTab03 extends BaseFragment {
 
 	private void initView() {
 		tv_context = (TextView) view.findViewById(R.id.tv_context);
-		tv_context.setText("222222222");
+		tv_context.setText("222222222这还是啥也没有");
 	}
 
 }
