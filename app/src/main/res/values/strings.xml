@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SortingData</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="custom_bar_home">主页</string>
+    <string name="custom_bar_body">正文</string>
+    <string name="custom_bar_setting">设置</string>
+
+</resources>
