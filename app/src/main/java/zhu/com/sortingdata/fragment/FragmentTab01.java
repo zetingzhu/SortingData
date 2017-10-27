@@ -231,8 +231,9 @@ public class FragmentTab01 extends BaseFragment {
 	@Override
 	public void onDestroy() {
 		super.onDestroy();
-		mImageCycleView.pushImageCycle();
-
+		if (mImageCycleView != null) {
+			mImageCycleView.pushImageCycle();
+		}
 	}
 
 	class MyAs extends AsyncTask<String, String, String> {
