@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SortingData</string>
+    <string name="app_name">整理文件</string>
     <string name="action_settings">Settings</string>
 
     <string name="custom_bar_home">主页</string>

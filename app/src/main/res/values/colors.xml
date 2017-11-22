@@ -8,4 +8,13 @@
     <color name="bg_color">#ececec</color>
     <color name="black">#000000</color>
     <color name="top_bg">#FF64A750</color>
+
+    <color name="left">#fc6a7b</color>
+    <color name="right">#2aad95</color>
+    <color name="font_text">#666</color>
+    <color name="textcolor">#63B8FF</color>
+    <color name="font_info">#999</color>
+    <color name="font_tips">#CCC</color>
+    <color name="strong">#FF5B26</color>
+
 </resources>

@@ -1,6 +1,11 @@
 package zhu.com.sortingdata.fragment;
 
 
+import android.animation.Animator;
+import android.animation.AnimatorInflater;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Build;
@@ -31,6 +36,8 @@ public class FragmentTab03 extends BaseFragment {
     private TextView mTv;
     private AnimationDrawable animationDrawable;
     private ImageView mIv;
+    private TextView tv_obj_anim;
+    private static final String TAG = "ZZT" ;
 
     @Override
     public View onCreateView(LayoutInflater inflater,
@@ -114,6 +121,58 @@ public class FragmentTab03 extends BaseFragment {
                 vreateValueAnimatorArgb();
             }
         });
+
+        tv_obj_anim = (TextView) view.findViewById(R.id.tv_obj_anim);
+
+        view.findViewById(R.id.button33).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alphaObjectAnimator();
+            }
+        });
+
+        view.findViewById(R.id.button34).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                rotationObjectAnimator();
+            }
+        });
+
+
+        view.findViewById(R.id.button35).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                translationXObjectAnimator();
+            }
+        });
+
+
+        view.findViewById(R.id.button36).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                scaleYObjectAnimator();
+            }
+        });
+
+
+        view.findViewById(R.id.button37).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                animatorSet();
+            }
+        });
+
+
+        view.findViewById(R.id.button38).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Animator animator = AnimatorInflater.loadAnimator(getActivity(), R.animator.anim_file);
+                animator.setTarget(tv_obj_anim);
+                animator.start();
+            }
+        });
+
+
 
     }
 
@@ -242,29 +301,94 @@ public class FragmentTab03 extends BaseFragment {
         });
         valueAnimator.setDuration(2000);//动画时长
         valueAnimator.start();//启动动画
-         }
+    }
 
-    private void vreateValueAnimatorArgb(){
+    private void vreateValueAnimatorArgb() {
 //ValueAnimator.ofArgb()方法是在API Level 21中才加入的
-        if(Build.VERSION.SDK_INT >= 21){
-            ValueAnimator valueAnimator = ValueAnimator.ofArgb(R.color.red,  android.R.color.holo_blue_bright);
+        if (Build.VERSION.SDK_INT >= 21) {
+            ValueAnimator valueAnimator = ValueAnimator.ofArgb(R.color.red, android.R.color.holo_blue_bright);
             valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                 @Override
                 public void onAnimationUpdate(ValueAnimator animation) {
                     int color = (int) animation.getAnimatedValue();
                     mTv.setBackgroundResource(color);
                     mTv.requestLayout();
-                    Log.d("AAA",color+"");
+                    Log.d("AAA", color + "");
                 }
             });
             valueAnimator.setDuration(2000);//动画时长
             valueAnimator.start();//启动动画
-        }else {
-            Log.d("AAA","没有到" + Build.VERSION.SDK_INT );
+        } else {
+            Log.d("AAA", "没有到" + Build.VERSION.SDK_INT);
         }
 
     }
 
 
+    private void alphaObjectAnimator() {
+        ObjectAnimator animatorAlpha = ObjectAnimator.ofFloat(tv_obj_anim, "alpha", 1f, 0f, 1f);
+        animatorAlpha.setDuration(3000);
+        animatorAlpha.start();
+    }
+
+    private void rotationObjectAnimator() {
+        ObjectAnimator animator = ObjectAnimator.ofFloat(tv_obj_anim, "rotation", 0f, 360f);
+        animator.setDuration(5000);
+        animator.start();
+    }
+
+    private void translationXObjectAnimator(){
+        float curTranslationX = tv_obj_anim.getTranslationX();
+        ObjectAnimator animator = ObjectAnimator.ofFloat(tv_obj_anim, "translationX", curTranslationX, -100f, curTranslationX);
+        animator.setDuration(5000);
+        animator.start();
+    }
+
+    private void scaleYObjectAnimator(){
+        ObjectAnimator animator = ObjectAnimator.ofFloat(tv_obj_anim, "scaleY", 1f, 3f, 1f);
+        animator.setDuration(5000);
+        animator.start();
+    }
+
+
+    private void animatorSet(){
+        ObjectAnimator moveIn = ObjectAnimator.ofFloat(tv_obj_anim, "translationX", -500f, 0f);
+        ObjectAnimator rotate = ObjectAnimator.ofFloat(tv_obj_anim, "rotation", 0f, 360f);
+        ObjectAnimator fadeInOut = ObjectAnimator.ofFloat(tv_obj_anim, "alpha", 1f, 0f, 1f);
+        AnimatorSet animSet = new AnimatorSet();
+        animSet.play(rotate).with(fadeInOut).after(moveIn);
+        animSet.setDuration(5000);
+        animSet.start();
+
+        animSet.addListener( new Animator.AnimatorListener() {
+            @Override
+            public void onAnimationStart(Animator animation) {
+                Log.e(TAG , "onAnimationStart");
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                Log.e(TAG , "onAnimationEnd");
+            }
+
+            @Override
+            public void onAnimationCancel(Animator animation) {
+                Log.e(TAG , "onAnimationCancel");
+            }
+
+            @Override
+            public void onAnimationRepeat(Animator animation) {
+                Log.e(TAG , "onAnimationRepeat");
+            }
+        });
+
+        animSet.addListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                super.onAnimationEnd(animation);
+                Log.e(TAG , "AnimatorListenerAdapter-onAnimationEnd");
+            }
+        });
+    }
 
 }

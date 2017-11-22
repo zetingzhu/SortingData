@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import in.srain.cube.views.ptr.PtrDefaultHandler;
 import in.srain.cube.views.ptr.PtrFrameLayout;
@@ -14,11 +15,16 @@ import in.srain.cube.views.ptr.PtrHandler;
 import in.srain.cube.views.ptr.header.MaterialHeader;
 import in.srain.cube.views.ptr.header.StoreHouseHeader;
 import in.srain.cube.views.ptr.util.PtrLocalDisplay;
+import zhu.com.sortingdata.MainActivity;
 import zhu.com.sortingdata.R;
+import zhu.com.sortingdata.activity.MainActivityTest;
+import zhu.com.sortingdata.activity.SeventhActivity;
+import zhu.com.sortingdata.activity.SixthActivity;
 
 public class FragmentTab02 extends BaseFragment {
     private View view;
     private PtrFrameLayout mPtrFrame;
+    private Button bt_tab02_01, bt_tab02_02, bt_tab02_03;
 
     @Override
     public View onCreateView(LayoutInflater inflater,
@@ -28,12 +34,39 @@ public class FragmentTab02 extends BaseFragment {
 
 
         initView();
+        initListener();
         initViewPUsh();
         return view;
     }
 
-    private void initView() {
 
+    private void initView() {
+        bt_tab02_01 = (Button) view.findViewById(R.id.bt_tab02_01);
+        bt_tab02_02 = (Button) view.findViewById(R.id.bt_tab02_02);
+        bt_tab02_03 = (Button) view.findViewById(R.id.bt_tab02_03);
+        //
+
+    }
+
+    private void initListener() {
+        bt_tab02_01.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), MainActivityTest.class));
+            }
+        });
+        bt_tab02_02.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), SixthActivity.class));
+            }
+        });
+        bt_tab02_03.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), SeventhActivity .class));
+            }
+        });
     }
 
     private void initViewPUsh() {
@@ -52,15 +85,15 @@ public class FragmentTab02 extends BaseFragment {
         /**
          * 经典 风格的头部实现
 
-        final PtrClassicDefaultHeader header = new PtrClassicDefaultHeader(getActivity());
-        header.setPadding(0, PtrLocalDisplay.dp2px(15), 0, 0);
+         final PtrClassicDefaultHeader header = new PtrClassicDefaultHeader(getActivity());
+         header.setPadding(0, PtrLocalDisplay.dp2px(15), 0, 0);
          */
 
         /**
          * StoreHouse风格的头部实现
 
-            final StoreHouseHeader header = new StoreHouseHeader(getActivity());
-            header.setPadding(0, PtrLocalDisplay.dp2px(15), 0, 0);
+         final StoreHouseHeader header = new StoreHouseHeader(getActivity());
+         header.setPadding(0, PtrLocalDisplay.dp2px(15), 0, 0);
          */
         /**
          * using a string, support: A-Z 0-9 - .
@@ -72,7 +105,7 @@ public class FragmentTab02 extends BaseFragment {
         /**
          * Material Design风格的头部实现
          */
-         final MaterialHeader header = new MaterialHeader(getActivity());
+        final MaterialHeader header = new MaterialHeader(getActivity());
         header.setPadding(0, PtrLocalDisplay.dp2px(15), 0, 0);//显示相关工具类，用于获取用户屏幕宽度、高度以及屏幕密度。同时提供了dp和px的转化方法。
 
 
@@ -101,7 +134,7 @@ public class FragmentTab02 extends BaseFragment {
             //需要加载数据时触发
             @Override
             public void onRefreshBegin(PtrFrameLayout frame) {
-                System.out.println("MainActivity.onRefreshBegin");
+                System.out.println("MainActivityTest.onRefreshBegin");
                 mPtrFrame.postDelayed(new Runnable() {
                     @Override
                     public void run() {
@@ -118,7 +151,7 @@ public class FragmentTab02 extends BaseFragment {
              */
             @Override
             public boolean checkCanDoRefresh(PtrFrameLayout frame, View content, View header) {
-                System.out.println("MainActivity.checkCanDoRefresh");
+                System.out.println("MainActivityTest.checkCanDoRefresh");
                 // 默认实现，根据实际情况做改动
                 return PtrDefaultHandler.checkContentCanBePulledDown(frame, content, header);
                 // return true;

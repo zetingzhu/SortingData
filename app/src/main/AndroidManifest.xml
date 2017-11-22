@@ -20,6 +20,14 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".activity.MainActivityTest"/>
+        <activity android:name=".activity.SecondActivity" />
+        <activity android:name=".activity.FourActivity" />
+        <activity android:name=".activity.ThirdActivity" />
+        <activity android:name=".activity.FiveActivity"></activity>
+        <activity android:name=".activity.SixthActivity"></activity>
+        <activity android:name=".activity.SeventhActivity"></activity>
+
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />

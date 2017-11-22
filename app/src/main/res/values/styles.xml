@@ -6,15 +6,30 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <!--去掉标题栏（ActionBar实际上是设置在标题栏上的）-->
+        <item name="android:windowNoTitle">true</item>
+        <!--去掉状态栏(顶部显示时间、电量的部分)，设置全屏-->
+        <item name="android:windowFullscreen">true</item>
+
     </style>
 
     <style name="AppTheme.NoActionBar">
+
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <!-- 设置背景图片
+        <item name="android:windowBackground">@drawable/splash_bg</item>
+        -->
+        <!--可防止Activity启动时显示白屏或黑屏-->
+        <item name="android:windowContentOverlay">@null</item>
+
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 
 </resources>

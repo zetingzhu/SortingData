@@ -23,6 +23,8 @@ import zhu.com.sortingdata.widget.CustomBar;
 
 public class MainActivity extends SlidingFragmentActivity implements OnPageChangeListener, CustomBar.SelectListener {
 
+    public final static String TAG = "ZZTTEST" ;
+
     private ViewPager pager;
     private CustomBar bar;
     // 默认背景图片

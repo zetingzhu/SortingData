@@ -24,12 +24,31 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="LinearLayout下拉" />
+
+            <Button
+                android:id="@+id/bt_tab02_01"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:text="曲线动画" />
+
+            <Button
+                android:id="@+id/bt_tab02_02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="动画-进度条" />
+            <Button
+                android:id="@+id/bt_tab02_03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="自定义闹钟" />
 
         </LinearLayout>
 
