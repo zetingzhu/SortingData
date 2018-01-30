@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="zhu.com.sortingdata">
 
     <application
@@ -33,5 +34,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- Include next permission if you want to allow UIL to cache images on SD card -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- Suggestion: use a compatible library with a minSdk of at most 15,  or increase this project's minSdk version to at least 19,-->
+    <uses-sdk tools:overrideLibrary="com.angel.view"/>
 
 </manifest>

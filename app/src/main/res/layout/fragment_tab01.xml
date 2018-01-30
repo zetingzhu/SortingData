@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_color"
@@ -66,6 +67,57 @@
                 android:layout_width="250dp"
                 android:layout_height="150dp"
                 android:src="@drawable/ic_launcher" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4、加载本地图片为圆角"
+                android:textColor="@color/black" />
+
+
+            <com.angel.view.SWImageView
+                android:id="@+id/iv_local_display01"
+                android:layout_marginTop="20dp"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/img_main"
+                android:layout_gravity="center"
+                app:borderColor="@color/colorPrimary"
+                app:borderWidth="3dp"
+                app:type="circle" />
+
+            <com.angel.view.SWImageView
+                android:layout_width="300dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="50dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_main"
+                app:borderWidth="1dp"
+                app:type="round" />
+
+            <com.angel.view.SWImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:src="@drawable/img_main"
+                app:type="circle" />
+
+            <com.angel.view.SWImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:src="@drawable/img_main"
+                app:type="circle" />
+
+            <com.angel.view.SWImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_main"
+                app:type="circle" />
+
+
         </LinearLayout>
     </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
 

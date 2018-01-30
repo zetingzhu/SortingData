@@ -7,10 +7,11 @@ import android.view.View;
 
 import zhu.com.sortingdata.R;
 
+
 /**
+ * 动画-进度条
  * Created by Administrator on 2017/11/15.
  */
-
 public class SixthActivity extends Activity {
 
     MyChangeArcView myChangeArcView ;

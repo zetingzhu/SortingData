@@ -141,11 +141,9 @@ public class MyChangeArcView  extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         initPaint();
-        Log.e(MainActivity.TAG , "viewWIdth:" + viewWIdth+  "viewHeight:" +  viewHeight) ;
         canvas.translate(viewWIdth / 2, viewHeight / 2);
         //最外层圆弧的半径
         outCircleRadius = (viewWIdth >= viewHeight ? viewHeight : viewWIdth) / 11.0f * 4.0f;
-        Log.e(MainActivity.TAG , "outCircleRadius:" + outCircleRadius ) ;
         RectF rectF = new RectF(-outCircleRadius, -outCircleRadius, outCircleRadius, outCircleRadius);
 
         //中间背景圆
