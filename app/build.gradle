@@ -24,16 +24,17 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    implementation 'com.android.support:appcompat-v7:25.3.1'
-    implementation 'com.android.support:design:25.2.0'
+
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
     testCompile 'junit:junit:4.12'
-    implementation project(':SlidingMeunlibrary')
-    implementation project(':PullToRefreshLibrary')
-    implementation files('libs/universal-image-loader-1.9.5.jar')
-    implementation project(':cropperimagelibrary')
-    implementation project(':ultrapulltorefreshlibrary')
+    compile project(':SlidingMeunlibrary')
+    compile project(':PullToRefreshLibrary')
+    compile files('libs/universal-image-loader-1.9.5.jar')
+    compile project(':cropperimagelibrary')
+    compile project(':ultrapulltorefreshlibrary')
 
     // 引用圆角图片显示控件
-    implementation 'com.angel:SWImageView:1.0.0'
+    compile 'com.angel:SWImageView:1.0.0'
 
 }

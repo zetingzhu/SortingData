@@ -16,8 +16,6 @@ public class FourActivity extends AppCompatActivity {
     }
 
     private void initview() {
-
         besselView = (MyBesselView) findViewById(R.id.my_besselview);
-
     }
 }
