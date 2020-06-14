@@ -1,0 +1,23 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\ZZTAndroid\Android_Work\SortingData\PullToRefreshLibrary\src\main\AndroidManifest.xml:2:1-7:12
+INJECTED from D:\ZZTAndroid\Android_Work\SortingData\PullToRefreshLibrary\src\main\AndroidManifest.xml:2:1-7:12
+INJECTED from D:\ZZTAndroid\Android_Work\SortingData\PullToRefreshLibrary\src\main\AndroidManifest.xml:2:1-7:12
+INJECTED from D:\ZZTAndroid\Android_Work\SortingData\PullToRefreshLibrary\src\main\AndroidManifest.xml:2:1-7:12
+INJECTED from D:\ZZTAndroid\Android_Work\SortingData\PullToRefreshLibrary\src\main\AndroidManifest.xml:2:1-7:12
+INJECTED from D:\ZZTAndroid\Android_Work\SortingData\PullToRefreshLibrary\src\main\AndroidManifest.xml:2:1-7:12
+INJECTED from D:\ZZTAndroid\Android_Work\SortingData\PullToRefreshLibrary\src\main\AndroidManifest.xml:2:1-7:12
+	package
+		ADDED from D:\ZZTAndroid\Android_Work\SortingData\PullToRefreshLibrary\src\main\AndroidManifest.xml:3:5-49
+		INJECTED from D:\ZZTAndroid\Android_Work\SortingData\PullToRefreshLibrary\src\main\AndroidManifest.xml
+		INJECTED from D:\ZZTAndroid\Android_Work\SortingData\PullToRefreshLibrary\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from D:\ZZTAndroid\Android_Work\SortingData\PullToRefreshLibrary\src\main\AndroidManifest.xml:5:5-32
+		INJECTED from D:\ZZTAndroid\Android_Work\SortingData\PullToRefreshLibrary\src\main\AndroidManifest.xml
+		INJECTED from D:\ZZTAndroid\Android_Work\SortingData\PullToRefreshLibrary\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\ZZTAndroid\Android_Work\SortingData\PullToRefreshLibrary\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from D:\ZZTAndroid\Android_Work\SortingData\PullToRefreshLibrary\src\main\AndroidManifest.xml:4:5-31
+		INJECTED from D:\ZZTAndroid\Android_Work\SortingData\PullToRefreshLibrary\src\main\AndroidManifest.xml
+		INJECTED from D:\ZZTAndroid\Android_Work\SortingData\PullToRefreshLibrary\src\main\AndroidManifest.xml
